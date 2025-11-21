@@ -1,0 +1,239 @@
+[08-Nov-2025 01:47:02 UTC] Clean[13-Nov-2025 11:13:37 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 11:13:37 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 11:13:37 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 11:13:37 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 11:47:38 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 11:47:38 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 11:47:38 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 11:47:40 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 11:47:52 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 11:47:52 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 11:47:52 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 11:47:54 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 11:52:38 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 11:52:38 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 11:52:38 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 11:52:40 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 17:18:24 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 17:18:24 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 17:18:24 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 17:18:27 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 19:26:08 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 19:26:08 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 19:26:08 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 19:26:11 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 20:25:01 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 20:25:01 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 20:25:01 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 20:25:01 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 20:25:02 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 20:25:02 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 20:25:02 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 20:25:02 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 20:41:00 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 20:41:00 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 20:41:00 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 20:41:02 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 21:13:50 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 21:13:50 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 21:13:50 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 21:13:57 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDERR" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_departures.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_departures.php on line 61
+[13-Nov-2025 21:31:45 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 21:31:45 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 21:31:45 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 21:31:45 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[13-Nov-2025 21:31:47 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[13-Nov-2025 21:31:47 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[13-Nov-2025 21:31:47 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[13-Nov-2025 21:31:47 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[14-Nov-2025 00:25:04 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[14-Nov-2025 00:25:04 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[14-Nov-2025 00:25:04 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[14-Nov-2025 00:25:04 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:153
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 153
+[14-Nov-2025 00:33:47 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[14-Nov-2025 00:33:47 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[14-Nov-2025 00:33:47 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[14-Nov-2025 00:33:47 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 155
+[14-Nov-2025 00:33:55 UTC] PHP Warning:  Constant FR24_API_TOKEN already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 6
+[14-Nov-2025 00:33:55 UTC] PHP Warning:  Constant FR24_API_BASE already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 7
+[14-Nov-2025 00:33:55 UTC] PHP Warning:  Constant FR24_API_VERSION already defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/config.php on line 8
+[14-Nov-2025 00:33:57 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 155
+[14-Nov-2025 00:58:33 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "STDOUT" in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 48
+[20-Nov-2025 04:45:41 UTC] PHP Warning:  Undefined variable $count in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 183
+[20-Nov-2025 04:45:41 UTC] PHP Warning:  Undefined variable $count in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 183
+[20-Nov-2025 04:45:43 UTC] PHP Warning:  Undefined variable $count in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 183
+[20-Nov-2025 04:45:43 UTC] PHP Warning:  Undefined variable $count in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 183
+[20-Nov-2025 11:04:46 UTC] PHP Fatal error:  Uncaught TypeError: avs_fetch_day(): Argument #3 ($targetDate) must be of type string, true given, called in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 523 and defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:242
+Stack trace:
+#0 /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php(523): avs_fetch_day()
+#1 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 242
+[20-Nov-2025 11:04:51 UTC] PHP Fatal error:  Uncaught TypeError: avs_fetch_day(): Argument #3 ($targetDate) must be of type string, true given, called in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 523 and defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:242
+Stack trace:
+#0 /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php(523): avs_fetch_day()
+#1 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 242
+[20-Nov-2025 13:19:59 UTC] PHP Fatal error:  Uncaught TypeError: fr24_ts(): Argument #1 ($value) must be of type ?int, string given, called in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 379 and defined in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php:236
+Stack trace:
+#0 /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php(379): fr24_ts()
+#1 /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php(892): normalize_fr24_row()
+#2 {main}
+  thrown in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/api/update_schedule.php on line 236
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 16:54:44 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:00 UTC] nbm_mmtj: HTTP 403 al solicitar https://nomads.ncep.noaa.gov/pub/data/nccf/com/blend/prod/blend.20251121/21/text/blend_nbhtx.t21z
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:01 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] nbm_mmtj: HTTP 403 al solicitar https://nomads.ncep.noaa.gov/pub/data/nccf/com/blend/prod/blend.20251121/21/text/blend_nbhtx.t21z
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
+[21-Nov-2025 21:08:07 UTC] PHP Warning:  Undefined variable $rowFlagClass in /home/u695435470/domains/atiscsl.esy.es/public_html/sigma/public/nbm_mmtj.php on line 798
