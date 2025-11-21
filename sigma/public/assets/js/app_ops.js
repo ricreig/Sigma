@@ -204,6 +204,15 @@ function toIsoUtc(isoLike){
       return 'UNKNW';
     }
 
+    // Si el STD ya pasó y seguimos dentro de la ventana estimada, asumir que va en ruta
+    if(base === 'SCHEDL' && stdTs && now >= stdTs){
+      const etaLimit = etaTs ? etaTs + 60*60000 : null; // 60 min de margen tras ETA
+      const withinEta = etaLimit === null || now <= etaLimit;
+      if(withinEta){
+        return etaTs ? 'ENROUTE' : 'TAXI';
+      }
+    }
+
     // Vuelos activos sin ETA: decidir entre TAXI o LANDED según hora planificada
     if((base === 'ENROUTE' || base === 'DELAYED' || base === 'TAXI') && !etaTs){
       if(refTs && (now - refTs) > 90*60000){
@@ -597,7 +606,7 @@ async function fetchFRIMap(){
         flight_iata: (r.flight_iata || r.flight_number || r.flight || null)?.toString().toUpperCase() || null,
         flight_number: (r.flight_number || null)?.toString().toUpperCase() || null,
         flight_icao: preferIcao(r) || null,
-        callsign   : r.callsign || r.call_sign || r.airline || r.airline_name || r.airline_icao || null,
+        callsign   : r.airline || r.airline_name || r.callsign || r.call_sign || r.airline_iata || r.airline_icao || null,
         airline    : r.airline || r.airline_name || r.airline_iata || r.airline_icao || null,
         dep_iata   : r.dep_iata || r.departure_iata || r.ADEP || null,
         dep_icao   : r.dep_icao || r.departure_icao || null,
@@ -898,7 +907,6 @@ function updateStatsCard(rows){
     if(altTxt) badges.push(altTxt);
 
     const stdTxt = formatHm(row.STD);
-    const atdTxt = formatHm(meta.atd_utc || null);
     const eetTxt = minutesToHHMM(deriveEetMinutes(row));
     const staTxt = formatHm(row.STA);
     const etaTxt = formatHm(row.ETA);
@@ -908,8 +916,6 @@ function updateStatsCard(rows){
       <div class="d-flex flex-wrap align-items-center gap-2 rmk-times">
         <span><strong>STD</strong> ${stdTxt}</span>
         <span class="text-secondary">•</span>
-        <span><strong>ATD</strong> ${atdTxt}</span>
-        <span class="text-secondary">•</span>
         <span><strong>EET</strong> ${eetTxt}</span>
         <span class="text-secondary">•</span>
         <span><strong>STA</strong> ${staTxt}</span>
@@ -918,7 +924,6 @@ function updateStatsCard(rows){
         <span class="text-secondary">•</span>
         <span><strong>DELAY</strong> <span class="${delayInfo.cls}">${delayInfo.txt}</span></span>
       </div>
-      <div class="d-flex flex-wrap gap-2 mt-2">${badges.join('')}</div>
     `;
 
     const origin = meta.dep_icao || meta.dep_iata || row.ADEP || '—';
@@ -1055,7 +1060,7 @@ function updateStatsCard(rows){
         idCell.addEventListener('click', ()=>{
           const code = (r._META?.flight_iata || r._META?.flight_number || r.ID || '').toString().trim();
           if(!code) return;
-          const url = `https://www.flightradar24.com/data/flights/${encodeURIComponent(code.toLowerCase())}`;
+          const url = `https://www.flightradar24.com/${encodeURIComponent(code.toUpperCase())}`;
           window.open(url, '_blank', 'noopener');
         });
       }
