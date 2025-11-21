@@ -382,6 +382,56 @@ async function fetchFRIMap(){
     return row.registration || row.ID || '—';
   }
 
+  function preferIata(row){
+    const iata = (row.flight_iata || row.flight_IATA || row.flight_number || '').toString().toUpperCase();
+    if(iata) return iata;
+    const airline = (row.airline_iata || row.airline || '').toString().toUpperCase();
+    const num = (row.flight_number || '').toString().replace(/^[A-Z]+/, '');
+    return (airline && num) ? `${airline}${num}` : '';
+  }
+
+  function minutesToHHMM(min){
+    if(!Number.isFinite(min)) return '—';
+    const m = Math.abs(Math.round(min));
+    const hh = Math.floor(m/60);
+    const mm = m % 60;
+    return `${pad2(hh)}:${pad2(mm)}`;
+  }
+
+  function formatHm(iso){
+    if(!iso) return '—';
+    const d = new Date(iso);
+    if(!isFinite(d)) return '—';
+    const hh = USE_LOCAL_TIME ? d.getHours() : d.getUTCHours();
+    const mm = USE_LOCAL_TIME ? d.getMinutes() : d.getUTCMinutes();
+    return `${pad2(hh)}:${pad2(mm)}`;
+  }
+
+  function deriveEetMinutes(row){
+    const meta = row?._META || {};
+    if(Number.isFinite(meta.eet_min)) return meta.eet_min;
+    const eta = row.ETA ? new Date(row.ETA) : null;
+    const sta = row.STA ? new Date(row.STA) : null;
+    const std = row.STD ? new Date(row.STD) : null;
+    if(eta && isFinite(eta) && std && isFinite(std)){
+      return Math.max(0, Math.round((eta.getTime() - std.getTime())/60000));
+    }
+    if(sta && isFinite(sta) && std && isFinite(std)){
+      return Math.max(0, Math.round((sta.getTime() - std.getTime())/60000));
+    }
+    return null;
+  }
+
+  function classifyDelay(minutes){
+    if(!Number.isFinite(minutes) || minutes === 0){
+      return {txt:'ON TIME', cls:'delay-neutral'};
+    }
+    if(minutes > 0){
+      return {txt: minutesToHHMM(minutes), cls:'delay-late'};
+    }
+    return {txt: `-${minutesToHHMM(minutes)}`, cls:'delay-early'};
+  }
+
   function normalizeCodeshares(raw){
     const out = [];
     const push = (code, reg=null)=>{
@@ -544,9 +594,10 @@ async function fetchFRIMap(){
       const dly = fmtDelay(parseInt(r.delay_min ?? '0',10) || 0);
       const raw = r.status || r.RAW_STS || 'unknown';
       const meta = {
-        flight_iata: r.flight_iata || r.flight_number || r.flight || null,
+        flight_iata: (r.flight_iata || r.flight_number || r.flight || null)?.toString().toUpperCase() || null,
+        flight_number: (r.flight_number || null)?.toString().toUpperCase() || null,
         flight_icao: preferIcao(r) || null,
-        callsign   : r.callsign || r.call_sign || r.flight_icao || null,
+        callsign   : r.callsign || r.call_sign || r.airline || r.airline_name || r.airline_icao || null,
         airline    : r.airline || r.airline_name || r.airline_iata || r.airline_icao || null,
         dep_iata   : r.dep_iata || r.departure_iata || r.ADEP || null,
         dep_icao   : r.dep_icao || r.departure_icao || null,
@@ -554,7 +605,9 @@ async function fetchFRIMap(){
         dst_icao   : r.dst_icao || r.arr_icao || null,
         ac_type    : r.ac_type || r.aircraft_icao || null,
         ac_reg     : r.ac_reg || r.aircraft_registration || null,
-        codeshares : normalizeCodeshares(r.codeshares || r.codeshares_json || null)
+        codeshares : normalizeCodeshares(r.codeshares || r.codeshares_json || null),
+        delay_min  : Number.isFinite(parseInt(r.delay_min ?? '0',10)) ? parseInt(r.delay_min,10) : 0,
+        eet_min    : Number.isFinite(parseInt(r.eet_min ?? 'NaN',10)) ? parseInt(r.eet_min,10) : null
       };
       meta.route = meta.dep_icao && meta.dst_icao ? `${meta.dep_icao} → ${meta.dst_icao}` : null;
 
@@ -835,21 +888,43 @@ function updateStatsCard(rows){
     const reset= mEl.querySelector('#stsReset');
     const save = mEl.querySelector('#rmkSave');
 
-    const etaDt = row.ETA ? new Date(row.ETA) : null;
-    const etaTxt = (etaDt && isFinite(etaDt)) ? `${pad2(etaDt.getUTCHours())}:${pad2(etaDt.getUTCMinutes())}Z` : '—';
-    hdr.textContent = `ETA ${etaTxt} · ${row.ID} · ADEP ${row.ADEP} · RAW ${row.RAW_STS}`;
-
     const meta = row._META || {};
+    const altTxt = row._ALT ? `<span class="badge bg-danger-subtle text-danger-emphasis px-3 py-2">ALT ${row._ALT}</span>` : '';
+    const badges = [
+      `<span class="badge badge-flight px-3 py-2">IATA ${meta.flight_iata || meta.flight_number || '—'}</span>`,
+      `<span class="badge badge-flight px-3 py-2">ICAO ${meta.flight_icao || row.ID || '—'}</span>`,
+      `<span class="badge badge-flight px-3 py-2">CALLSIGN ${meta.callsign || '—'}</span>`
+    ];
+    if(altTxt) badges.push(altTxt);
+
+    const stdTxt = formatHm(row.STD);
+    const atdTxt = formatHm(meta.atd_utc || null);
+    const eetTxt = minutesToHHMM(deriveEetMinutes(row));
+    const staTxt = formatHm(row.STA);
+    const etaTxt = formatHm(row.ETA);
+    const delayInfo = classifyDelay(meta.delay_min);
+
+    hdr.innerHTML = `
+      <div class="d-flex flex-wrap align-items-center gap-2 rmk-times">
+        <span><strong>STD</strong> ${stdTxt}</span>
+        <span class="text-secondary">•</span>
+        <span><strong>ATD</strong> ${atdTxt}</span>
+        <span class="text-secondary">•</span>
+        <span><strong>EET</strong> ${eetTxt}</span>
+        <span class="text-secondary">•</span>
+        <span><strong>STA</strong> ${staTxt}</span>
+        <span class="text-secondary">•</span>
+        <span><strong>ETA</strong> ${etaTxt}</span>
+        <span class="text-secondary">•</span>
+        <span><strong>DELAY</strong> <span class="${delayInfo.cls}">${delayInfo.txt}</span></span>
+      </div>
+      <div class="d-flex flex-wrap gap-2 mt-2">${badges.join('')}</div>
+    `;
+
     const origin = meta.dep_icao || meta.dep_iata || row.ADEP || '—';
     const dest   = meta.dst_icao || meta.dst_iata || row._ALT || 'MMTJ';
     const route  = meta.route || ((origin && dest && origin !== '—') ? `${origin} → ${dest}` : null);
     const codeshares = enrichCodeshares(meta.codeshares || []);
-
-    const badges = [
-      `<span class="badge text-bg-primary px-3 py-2">ICAO ${meta.flight_icao || row.ID || '—'}</span>`
-    ];
-    if(meta.callsign){ badges.push(`<span class="badge text-bg-info text-dark px-3 py-2">CALL ${meta.callsign}</span>`); }
-    if(row._ALT){ badges.push(`<span class="badge text-bg-danger px-3 py-2">ALT ${row._ALT}</span>`); }
 
     const detailCards = [
       {
@@ -978,7 +1053,7 @@ function updateStatsCard(rows){
         idCell.classList.add('clickable-id');
         idCell.setAttribute('title','Abrir en FlightRadar24');
         idCell.addEventListener('click', ()=>{
-          const code = (r._META?.flight_icao || r._META?.callsign || r.ID || '').toString().trim();
+          const code = (r._META?.flight_iata || r._META?.flight_number || r.ID || '').toString().trim();
           if(!code) return;
           const url = `https://www.flightradar24.com/data/flights/${encodeURIComponent(code.toLowerCase())}`;
           window.open(url, '_blank', 'noopener');

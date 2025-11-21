@@ -84,8 +84,10 @@ $rows = [];
 $seen = [];
 
 while ($r = $res->fetch_assoc()) {
-    $callsign   = strtoupper(trim((string)($r['callsign'] ?? '')));
-    $flightIata = strtoupper(trim((string)($r['flight_number'] ?? '')));
+    $callsignRaw = strtoupper(trim((string)($r['callsign'] ?? '')));
+    $airlineCall = strtoupper(trim((string)($r['airline'] ?? '')));
+    $callsign    = $callsignRaw ?: $airlineCall;
+    $flightIata  = strtoupper(trim((string)($r['flight_number'] ?? '')));
     // Usamos callsign como identificador ICAO principal cuando existe
     $flightIcao = $callsign ?: $flightIata;
 
@@ -144,6 +146,7 @@ while ($r = $res->fetch_assoc()) {
         'id'           => (int)$r['id'],
         'flight_icao'  => $flightIcao,
         'flight_iata'  => $flightIata,
+        'flight_number'=> $flightIata,
         'callsign'     => $callsign,
         'airline_icao' => strtoupper((string)($r['airline'] ?? '')),
         // OJO: aquí van ICAO completos, aunque el campo se llame *_iata
