@@ -9,6 +9,8 @@
 
 /* ===== ID mono ===== */
 .cell-id{font-family:ui-monospace,Menlo,Consolas,monospace}
+.cell-id.clickable-id{cursor:pointer;}
+.cell-id.clickable-id:hover{color:inherit;text-decoration:none;}
 
 /* ===== EET por puntualidad (prioridad alta en celdas) ===== */
 table#grid td.eet-early  { color:#22c55e !important; }
