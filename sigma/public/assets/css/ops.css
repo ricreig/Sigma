@@ -67,3 +67,15 @@ table#grid td.eet-done   { color:#9ca3af !important; }
 
 /* ===== FRI badge con decimales ===== */
 .badge-fri{min-width:2.8rem;font-variant-numeric:tabular-nums}
+
+/* ===== RMK modal ===== */
+.badge-flight{
+  background:#e0f2fe;
+  color:#0284c7;
+  border:1px solid #bae6fd;
+  font-weight:700;
+}
+.rmk-times strong{color:#cbd5e1;font-weight:700;}
+.delay-late{color:#ef4444;font-weight:700;}
+.delay-early{color:#22c55e;font-weight:700;}
+.delay-neutral{color:#e2e8f0;font-weight:700;}

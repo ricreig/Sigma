@@ -320,7 +320,8 @@ if (!preg_match('/^[A-Z]{3,4}$/', $dep_iata)) {
     $dep_iata = '';
 }
 
-      $flt_iata = strtoupper((string)($r['flight_iata'] ?? ''));
+      $flightNumberRaw = strtoupper((string)($r['flight_number'] ?? ''));
+      $flt_iata = strtoupper((string)($r['flight_iata'] ?? $flightNumberRaw));
       // Prioriza callsign como ID ICAO de vuelo
       $flt_icao = strtoupper((string)($r['flight_icao'] ?? $r['callsign'] ?? ''));
 
@@ -338,10 +339,10 @@ if (!preg_match('/^[A-Z]{3,4}$/', $dep_iata)) {
           $flt_icao = $flt_iata;
         }
       }
-      $flightNum = '';
-      if ($flt_iata && preg_match('/^([A-Z]{2,4})(\d+)/', $flt_iata, $m)) {
-        $flightNum = $m[2];
-      } elseif ($flt_icao && preg_match('/^[A-Z]{2,4}(\d+)/', $flt_icao, $m)) {
+      $flightNum = $flightNumberRaw;
+      if ($flightNum === '' && $flt_iata && preg_match('/^([A-Z]{2,4}\d+)/', $flt_iata, $m)) {
+        $flightNum = $m[1];
+      } elseif ($flightNum === '' && $flt_icao && preg_match('/^([A-Z]{2,4}\d+)/', $flt_icao, $m)) {
         $flightNum = $m[1];
       }
 
