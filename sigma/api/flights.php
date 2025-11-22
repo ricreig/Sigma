@@ -196,7 +196,7 @@ if ($use_summary) {
       $maxEnd  = strtotime('+14 days', $fromTS);
       if ($toTS > $maxEnd) $toTS = $maxEnd;
       $toIso   = gmdate('Y-m-d\TH:i:s\Z', $toTS);
-      $summaryURL = "https://fr24api.flightradar24.com/api/flight-summary/full?airports=inbound:TIJ&flight_datetime_from={$fromIso}&flight_datetime_to={$toIso}";
+      $summaryURL = "https://fr24api.flightradar24.com/api/flight-summary/light?airports=inbound:TIJ&flight_datetime_from={$fromIso}&flight_datetime_to={$toIso}";
       $ctxOpts = [
         'http' => [
           'method'  => 'GET',
@@ -272,6 +272,9 @@ if ($use_summary) {
             'eet_min'       => $eetMin,
             'dest_iata_actual' => $destActual,
             'registration'  => $reg,
+            'flight_ended'  => !empty($info['flight_ended']),
+            'last_seen'     => norm_time($info['last_seen'] ?? null),
+            'datetime_landed' => $eta,
           ];
         }
       }
@@ -425,25 +428,28 @@ if (!preg_match('/^[A-Z]{3,4}$/', $dep_iata)) {
     }
     $delay  = (int)(find_key_deep((array)$arrival, ['delay','delayed','delay_min']) ?? 0);
 
-    $out[] = [
-      'eta_utc'       => $eta ?: ($sta ?: null),
-      'sta_utc'       => $sta,
-      'ata_utc'       => $ata,
-      'std_utc'       => $std,
-      'dep_iata'      => $dep_iata,
-      'delay_min'     => $delay,
-      'status'        => $status,
-      'flight_icao'   => $flt_icao,
-      'flight_number' => $num,
-      'airline_icao'  => $aln_icao,
-      'fri_pct'       => -1,
-      'eet_min'       => null,
-      // Destination airport actually flown to (if diverted); filled later
-      'dest_iata_actual' => null,
-      // Aircraft registration (tail number), filled later from FR24 flight summary
-      'registration' => null,
-    ];
-  }
+      $out[] = [
+        'eta_utc'       => $eta ?: ($sta ?: null),
+        'sta_utc'       => $sta,
+        'ata_utc'       => $ata,
+        'std_utc'       => $std,
+        'dep_iata'      => $dep_iata,
+        'delay_min'     => $delay,
+        'status'        => $status,
+        'flight_icao'   => $flt_icao,
+        'flight_number' => $num,
+        'airline_icao'  => $aln_icao,
+        'fri_pct'       => -1,
+        'eet_min'       => null,
+        // Destination airport actually flown to (if diverted); filled later
+        'dest_iata_actual' => null,
+        // Aircraft registration (tail number), filled later from FR24 flight summary
+        'registration' => null,
+        'flight_ended' => !empty($r['flight_ended']),
+        'last_seen'    => norm_time($r['last_seen'] ?? null),
+        'datetime_landed' => $ata,
+      ];
+    }
 }
 
 /*
@@ -469,7 +475,7 @@ if (!$use_summary) {
       $toTS   = $nowTS + $hours * 3600;
       $fromIso= gmdate('Y-m-d\TH:i:s\Z', $fromTS);
       $toIso  = gmdate('Y-m-d\TH:i:s\Z', $toTS);
-      $summaryURL = "https://fr24api.flightradar24.com/api/flight-summary/full?airports=inbound:TIJ&flight_datetime_from={$fromIso}&flight_datetime_to={$toIso}";
+      $summaryURL = "https://fr24api.flightradar24.com/api/flight-summary/light?airports=inbound:TIJ&flight_datetime_from={$fromIso}&flight_datetime_to={$toIso}";
       $ctxOpts = [
         'http' => [
           'method'  => 'GET',

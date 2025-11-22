@@ -20,9 +20,9 @@ table#grid td.eet-done   { color:#9ca3af !important; }
 
 /* ===== Badges STS 6 letras ===== */
 .badge-sts{font-weight:700;border-radius:.5rem;padding:.18rem .48rem;font-size:.78rem}
-.sts-LANDED {background:#052e16;color:#86efac;border:1px solid #065f46}   /* verde apagado */
-.sts-SCHEDL {background:#1e293b;color:#93c5fd;border:1px solid #1d4ed8}
-.sts-ENROUTE{background:#052e16;color:#a7f3d0;border:1px solid #10b981}
+.sts-LANDED {background:#0f172a;color:#cbd5e1;border:1px solid #334155}   /* verde apagado */
+.sts-SCHEDL {background:#1f2a44;color:#9cc3ff;border:1px solid #2563eb}
+.sts-ENROUTE{background:#064e3b;color:#bbf7d0;border:1px solid #22c55e}
 .sts-DELAYED{background:#3b1d06;color:#fdba74;border:1px solid #f59e0b}
 .sts-ALTERN {background:#3b1d06;color:#fdba74;border:1px solid #f59e0b}
 .sts-CANCLD {background:#3f0b13;color:#fecaca;border:1px solid #dc2626}
@@ -32,6 +32,21 @@ table#grid td.eet-done   { color:#9ca3af !important; }
 /* Taxi flights: active flights without scheduled arrival (STA).  Reuse the en-route
    color scheme for taxiing aircraft. */
 .sts-TAXI   {background:#052e16;color:#a7f3d0;border:1px solid #10b981}
+
+/* ===== Resaltado de la fila más cercana a la hora actual ===== */
+table#grid tbody tr.row-near-now{
+  position:relative;
+  background:rgba(148,163,184,.08);
+}
+table#grid tbody tr.row-near-now::after{
+  content:"";
+  position:absolute;
+  inset:2px;
+  border:1px solid rgba(148,163,184,.4);
+  border-radius:.5rem;
+  pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(148,163,184,.2);
+}
 
 /* ===== Toolbar ===== */
 .dt-field{width:14rem}
