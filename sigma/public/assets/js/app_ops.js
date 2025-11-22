@@ -182,6 +182,13 @@ function toIsoUtc(isoLike){
     const over = getRMK(row).stsOverride;
     if (over) return over;
 
+    const meta = row._META || {};
+    if (meta.flight_ended) {
+      if (!row._ATA && meta.datetime_landed) row._ATA = meta.datetime_landed;
+      else if (!row._ATA && meta.last_seen) row._ATA = meta.last_seen;
+      return 'LANDED';
+    }
+
     const base = rawToSTS6(row.RAW_STS);
     const now = Date.now();
     const etaTs = row.ETA ? Date.parse(row.ETA) : null;
@@ -616,12 +623,16 @@ async function fetchFRIMap(){
         ac_reg     : r.ac_reg || r.aircraft_registration || null,
         codeshares : normalizeCodeshares(r.codeshares || r.codeshares_json || null),
         delay_min  : Number.isFinite(parseInt(r.delay_min ?? '0',10)) ? parseInt(r.delay_min,10) : 0,
-        eet_min    : Number.isFinite(parseInt(r.eet_min ?? 'NaN',10)) ? parseInt(r.eet_min,10) : null
+        eet_min    : Number.isFinite(parseInt(r.eet_min ?? 'NaN',10)) ? parseInt(r.eet_min,10) : null,
+        flight_ended: !!r.flight_ended,
+        datetime_landed: r.datetime_landed || null,
+        last_seen: r.last_seen || null
       };
       meta.route = meta.dep_icao && meta.dst_icao ? `${meta.dep_icao} → ${meta.dst_icao}` : null;
 
       const row = normRow({ eta: eta, sta: sta, std: std, id: id, adep: adep, fri: fri, dly: dly, raw_sts: raw, meta });
-      if (r.ata_utc || r._ATA) row._ATA = r.ata_utc || r._ATA;
+      const ataIso = r.ata_utc || r._ATA || r.datetime_landed || null;
+      if (ataIso) row._ATA = ataIso;
       // Add alternate airport if provided
       if (r.dest_iata_actual) row._ALT = String(r.dest_iata_actual).toUpperCase();
       rows.push(row);
@@ -1024,6 +1035,34 @@ function updateStatsCard(rows){
   }
 
   /* ===== Render ===== */
+  function closestRowIndexToday(rows){
+    const now = new Date();
+    const todayKey = USE_LOCAL_TIME
+      ? `${now.getFullYear()}-${pad2(now.getMonth()+1)}-${pad2(now.getDate())}`
+      : `${now.getUTCFullYear()}-${pad2(now.getUTCMonth()+1)}-${pad2(now.getUTCDate())}`;
+
+    let bestIdx = -1;
+    let bestDiff = Infinity;
+
+    rows.forEach((r, idx)=>{
+      const iso = rowTimeKey(r);
+      if(!iso) return;
+      const d = new Date(iso);
+      if(!isFinite(d)) return;
+      const key = USE_LOCAL_TIME
+        ? `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`
+        : `${d.getUTCFullYear()}-${pad2(d.getUTCMonth()+1)}-${pad2(d.getUTCDate())}`;
+      if(key !== todayKey) return;
+      const diff = Math.abs(d.getTime() - now.getTime());
+      if(diff < bestDiff){
+        bestDiff = diff;
+        bestIdx = idx;
+      }
+    });
+
+    return bestIdx;
+  }
+
   function renderGrid(rows){
     tbody.innerHTML = '';
     if(!rows.length){
@@ -1031,7 +1070,8 @@ function updateStatsCard(rows){
       updateStatsCard(rows);
       return;
     }
-    for(const r of rows){
+    const highlightIdx = closestRowIndexToday(rows);
+    rows.forEach((r, idx)=>{
       const {txt:eetTxt, cls:eetCls} = deriveEET(r);
       const stash = getRMK(r);
       const sts6 = effectiveSTS6(r);
@@ -1052,6 +1092,7 @@ function updateStatsCard(rows){
           </div>
           ${ (stash.alt || r._ALT) ? `<div class="small text-info">${stash.alt || r._ALT}</div>` : '' }
         </td>`;
+      if(idx === highlightIdx) tr.classList.add('row-near-now');
       tbody.appendChild(tr);
       const idCell = tr.querySelector('.cell-id');
       if(idCell){
@@ -1060,12 +1101,12 @@ function updateStatsCard(rows){
         idCell.addEventListener('click', ()=>{
           const code = (r._META?.flight_iata || r._META?.flight_number || r.ID || '').toString().trim();
           if(!code) return;
-          const url = `https://www.flightradar24.com/${encodeURIComponent(code.toUpperCase())}`;
+          const url = `https://www.flightradar24.com/data/flights/${encodeURIComponent(code.toUpperCase())}`;
           window.open(url, '_blank', 'noopener');
         });
       }
       tr.querySelector('.btn-rmk').addEventListener('click', ()=> openRMK(r));
-    }
+    });
     updateStatsCard(rows);
     window._lastRows = rows;
   }
